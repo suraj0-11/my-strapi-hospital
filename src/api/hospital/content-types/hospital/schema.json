@@ -1,0 +1,49 @@
+{
+  "kind": "collectionType",
+  "collectionName": "hospitals",
+  "info": {
+    "singularName": "hospital",
+    "pluralName": "hospitals",
+    "displayName": "Hospital"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "dispensaries": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::dispensary.dispensary",
+      "mappedBy": "hospital"
+    },
+    "patient": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "plugin::users-permissions.user",
+      "mappedBy": "hospital"
+    },
+    "doctors": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "plugin::users-permissions.user",
+      "mappedBy": "hospital"
+    },
+    "labs": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::lab.lab",
+      "mappedBy": "hospital"
+    },
+    "Hospital_name": {
+      "type": "string"
+    },
+    "Address": {
+      "type": "string"
+    },
+    "hospital_id": {
+      "type": "uid",
+      "targetField": "Hospital_name"
+    }
+  }
+}

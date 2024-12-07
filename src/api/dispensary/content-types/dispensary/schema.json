@@ -1,0 +1,48 @@
+{
+  "kind": "collectionType",
+  "collectionName": "dispensaries",
+  "info": {
+    "singularName": "dispensary",
+    "pluralName": "dispensaries",
+    "displayName": "dispensary",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "prescription": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "medicines": {
+      "type": "json"
+    },
+    "owner": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "dispensaries"
+    },
+    "prescriptions": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::prescription.prescription",
+      "mappedBy": "dispensaries"
+    },
+    "hospital": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::hospital.hospital",
+      "inversedBy": "dispensaries"
+    }
+  }
+}
