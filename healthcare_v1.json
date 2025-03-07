@@ -2,7 +2,7 @@
   "openapi": "3.0.0",
   "info": {
     "version": "1.0.0",
-    "title": "DOCUMENTATION",
+    "title": "Healtcare_v1",
     "description": "",
     "termsOfService": "YOUR_TERMS_OF_SERVICE_URL",
     "contact": {
@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2025-03-06T07:00:18.600Z"
+    "x-generation-date": "2024-12-14T10:05:00.176Z"
   },
   "x-strapi-config": {
     "plugins": [
